@@ -1,9 +1,10 @@
-import React, { createClass } from 'react';
+import React from 'react';
+import createReactClass from 'create-react-class';
 import { createResponsiveConnect } from 'react-matchmedia-connect';
 
 const matchMediaConnect = createResponsiveConnect();
 
-const App = createClass({
+const App = createReactClass({
 
     displayName: 'App',
 

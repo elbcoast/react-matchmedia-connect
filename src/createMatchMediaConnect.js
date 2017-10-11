@@ -1,4 +1,5 @@
-import React, { createClass } from 'react';
+import React from 'react';
+import createReactClass from 'create-react-class';
 import shallowEqual from './utils/shallowEqual';
 import throttle from './utils/throttle';
 import pick from './utils/pick';
@@ -63,7 +64,7 @@ export default function createMatchMediaConnect(queryMap = {}, options = {}) {
             return pick(stateToPickFrom, ...pickProperties);
         }
         return function wrapWithConnect(Component) {
-            return createClass({
+            return createReactClass({
                 displayName: 'ConnectMatchMedia',
                 getInitialState() {
                     return pickState(state);
